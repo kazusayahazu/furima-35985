@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_item, only:[:show, :edit, :update, :destroy]
-  before_action :user_judgement, only:[:edit, :destroy]
+  before_action :user_judgement, only:[:edit, :update, :destroy]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    redirect_to root_path if @item.purchase.present?
   end
 
   def update

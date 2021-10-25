@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener("load", function(){
 
   const priceInput = document.getElementById("item-price")
   priceInput.addEventListener("input", ()=> {
