@@ -41,11 +41,11 @@
 | item   | references | null: false, foreign_key: true |
 
 ### Association
-- belings_to :user
+- belongs_to :user
 - belongs_to :item
-- has_one :delivery
+- has_one :address
 
-## deliverysテーブル
+## addressesテーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
