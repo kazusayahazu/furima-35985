@@ -12,7 +12,7 @@ class Item < ApplicationRecord
 
   validates :image, :name, :text, :price, presence: true
   validates :category_id, :status_id, :delivery_fee_id, :shipment_source_id, :days_id,
-            numericality: { other_than: 1, message: "can't be blank" }
+            numericality: { other_than: 1, message: "を入力してください" }
   validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
   validates :price, format: { with: /\A[0-9]+\z/ }
 end

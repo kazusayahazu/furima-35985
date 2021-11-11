@@ -5,9 +5,9 @@ class PurchaseAddress
 
   with_options presence: true do
     validates :user_id, :item_id, :municipalities, :address, :token
-    validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/, message: 'is invalid. Include hyphen(-)' }
-    validates :shipment_source_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: 'is invalid' }
+    validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/, message: 'は無効です ハイフン(-)を入力してください' }
+    validates :shipment_source_id, numericality: { other_than: 1, message: "を入力してください" }
+    validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: 'は無効です' }
   end
 
   def save
